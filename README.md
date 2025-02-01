@@ -1,6 +1,6 @@
 ## Table of Contents
-1. [Measures of Central Tendency](#1-measures-of-Central-Tendency)
-2. [Measures of Spread](#1-measures-of-spread)
+1. [Measures of Central Tendency](#measures-of-central-tendency)
+2. [Measures of Spread](#measures-of-spread)
 
 
 ## **Measures of Central Tendency**
@@ -107,8 +107,6 @@ The **mode** is the value that appears most frequently in a dataset. Unlike the 
 
 
 [🔼 Back to Top](#table-of-contents)
-
-
 
 ## **Measures of Spread**
 
