@@ -271,6 +271,11 @@ sns.boxplot(data=data)
 plt.title("Boxplot Showing Spread (IQR, Outliers)")
 plt.show()
 ```
+Range: 90
+IQR: 40.0
+Variance: 765.4320987654321
+Standard Deviation: 27.666443551086072
+![image](https://github.com/user-attachments/assets/f0a46066-f86c-46b4-905e-8d6538720a47)
 
 ---
 
@@ -347,21 +352,14 @@ Kurtosis tells us **how extreme values behave** in a distribution.
 
 ---
 
-### **3️⃣ Can Low Kurtosis Be Skewed?**
-Yes! Skewness and kurtosis are **independent** properties.  
-- **Low Kurtosis + Positive Skew**: Salaries with a pay cap (uniform range, but some high salaries).  
-- **Low Kurtosis + Negative Skew**: Discounted prices (most items near a fixed price, some heavily discounted).  
-
----
-
-### **4️⃣ Does High Kurtosis Mean Higher Probability of Extreme Values?**
+### **Does High Kurtosis Mean Higher Probability of Extreme Values?**
 ✅ **Yes!** High kurtosis distributions have **more extreme values** than normal distributions.  
 ✅ This does **not necessarily** mean higher overall variance, but **outliers occur more often**.  
 🚀 **Example:** Stock returns—normal conditions are stable, but when a crash happens, it’s severe.
 
 ---
 
-### **5️⃣ Visualization (Skewness & Kurtosis Combinations)**  
+### **Visualization (Skewness & Kurtosis Combinations)**  
 
 We have discussed **9 cases** based on skewness and kurtosis. Below are their characteristics:
 
@@ -370,5 +368,8 @@ We have discussed **9 cases** based on skewness and kurtosis. Below are their ch
 | **Zero Skew** (Symmetric) | Standard Bell Curve (Heights) | More Outliers (Stock Market Crashes) | Flat Distribution (Uniform Exam Scores) |
 | **Positive Skew** (Right) | Salaries (Few High Earners) | More Extreme High Salaries (Startup IPOs) | Capped Salaries (Fixed Pay Bands) |
 | **Negative Skew** (Left) | Exam Completion Time | Rare but Extreme Delays (Flights) | Discounted Prices (Narrow Range) |
+
+![image](https://github.com/user-attachments/assets/4f709ede-1bd5-4678-ab77-7d1f4fa552aa)
+
 
 [🔼 Back to Top](#table-of-contents)
