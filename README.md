@@ -1,6 +1,7 @@
 ## Table of Contents
 1. [Measures of Central Tendency](#measures-of-central-tendency)
 2. [Measures of Spread](#measures-of-spread)
+3. [Understanding Skewness and Kurtosis](#understanding-skewness-and-kurtosis)
 
 
 ## **Measures of Central Tendency**
@@ -120,7 +121,7 @@ The four key measures of spread are:
 
 ---
 
-## **1️⃣ Range: The Simplest Measure of Spread**
+### **1️⃣ Range: The Simplest Measure of Spread**
 - **Definition:** The difference between the **maximum** and **minimum** values in a dataset.  
 - **Formula:**  
   $$\text{Range} = \text{Max Value} - \text{Min Value}$$
@@ -130,7 +131,7 @@ The four key measures of spread are:
 - **Limitation:**  
   - **Sensitive to outliers** (a single extreme value can distort the range).
 
-### **Real-World Example: Temperature Variations 🌡️**  
+#### **Real-World Example: Temperature Variations 🌡️**  
 - Suppose you check the temperature in San Francisco over a week:  
   - **Temperatures**: `[50°F, 52°F, 55°F, 60°F, 62°F, 64°F, 66°F]`  
   - **Range** = `66°F - 50°F = 16°F`  
@@ -143,7 +144,7 @@ The four key measures of spread are:
 
 ---
 
-## **2️⃣ Interquartile Range (IQR): Spread of the Middle 50%**
+### **2️⃣ Interquartile Range (IQR): Spread of the Middle 50%**
 - **Definition:** The range of the **middle 50% of data** (between Q1 and Q3).  
 - **Formula:**  
   $$\text{IQR} = Q3 - Q1$$
@@ -157,7 +158,7 @@ The four key measures of spread are:
   - **Not affected by outliers**, unlike range.  
   - Used in **box plots** to detect **outliers**.
 
-### **Real-World Example: Income Distribution 💰**  
+#### **Real-World Example: Income Distribution 💰**  
 - Suppose we analyze **monthly salaries** in a company:  
   - **Salaries**: `[3K, 3.5K, 4K, 4.5K, 5K, 50K]`  
   - **Q1 = 3.5K**, **Q3 = 5K**  
@@ -171,7 +172,7 @@ The four key measures of spread are:
 
 ---
 
-## **3️⃣ Variance: The Average Squared Deviation from the Mean**
+### **3️⃣ Variance: The Average Squared Deviation from the Mean**
 - **Definition:** Measures how far each value in the dataset is from the mean.  
 - **Formula:**  
   $$\text{Variance} (\sigma^2) = \frac{\sum (x_i - \bar{x})^2}{n}$$
@@ -189,7 +190,7 @@ The four key measures of spread are:
   - **Low variance** → Data points are close to the mean (less spread).  
   - **High variance** → Data points are far from the mean (more spread).
 
-### **Real-World Example: Manufacturing Quality Control 🏭**  
+#### **Real-World Example: Manufacturing Quality Control 🏭**  
 - Suppose a factory produces **water bottles**, and we measure their weights:  
   - **Bottle Weights (grams):** `[500, 502, 498, 505, 495, 550]`  
   - **Mean Weight = ~508g**  
@@ -203,7 +204,7 @@ The four key measures of spread are:
 
 ---
 
-## **4️⃣ Standard Deviation: The Square Root of Variance**
+### **4️⃣ Standard Deviation: The Square Root of Variance**
 - **Definition:** Measures the **average distance** of each data point from the mean.  
 - **Formula:**  
   $$\text{Standard Deviation} (\sigma) = \sqrt{\text{Variance}}$$
@@ -215,7 +216,7 @@ The four key measures of spread are:
   - The **variance is squared**, making it hard to interpret.  
   - Standard deviation is in the **same units** as the data, making it easier to understand.
 
-### **Real-World Example: Exam Performance in a Class 📚**  
+#### **Real-World Example: Exam Performance in a Class 📚**  
 - Suppose two classes take a **math test**, and we analyze their scores:  
 
 | Class | Scores | Mean | Standard Deviation |
@@ -232,7 +233,7 @@ The four key measures of spread are:
 
 ---
 
-## **Comparing the Measures of Spread**
+### **Comparing the Measures of Spread**
 | Measure | Formula | Best For | Affected by Outliers? |
 |---------|--------|----------|---------------------|
 | **Range** | Max - Min | Quick estimation of spread | ✅ Yes |
@@ -242,7 +243,7 @@ The four key measures of spread are:
 
 ---
 
-## **Python Code to Visualize These Measures** 📊
+### **Python Code to Visualize These Measures** 📊
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -296,5 +297,78 @@ plt.show()
 👉 **When precision is needed, Standard Deviation is better than Range.**  
 👉 **Variance is useful for calculations but hard to interpret directly.**  
 
+
+[🔼 Back to Top](#table-of-contents)
+
+
+---
+
+## **Understanding Skewness and Kurtosis**
+
+Skewness and kurtosis are key statistical concepts used to understand the **shape** of a probability distribution beyond just the mean and variance.  
+
+
+### **1️⃣ Skewness (Measure of Symmetry)**
+Skewness tells us **how symmetric or asymmetric** a distribution is.  
+
+- **Zero Skewness (Symmetric Distribution)**
+  - The left and right sides of the distribution are **evenly balanced**.
+  - Example: **Human heights**.
+
+- **Positive Skewness (Right-Skewed)**
+  - The **right tail is longer** (more extreme high values).
+  - Mean > Median > Mode.
+  - Example: **Income distribution (most earn average, a few earn very high salaries)**.
+
+- **Negative Skewness (Left-Skewed)**
+  - The **left tail is longer** (more extreme low values).
+  - Mode > Median > Mean.
+  - Example: **Time taken to complete an easy exam (most finish quickly, few take long)**.
+
+---
+
+### **2️⃣ Kurtosis (Measure of Tailedness)**
+Kurtosis tells us **how extreme values behave** in a distribution.  
+
+- **Normal Kurtosis (Mesokurtic, ≈3)**
+  - Standard bell curve.
+  - Moderate frequency of extreme values.
+  - Example: **Human heights**.
+
+- **High Kurtosis (Leptokurtic, >3)**
+  - **Fat tails** = More frequent extreme values (outliers).
+  - The peak is often sharper.
+  - Example: **Stock market crashes (rare but extreme events like 2008 crisis)**.
+
+- **Low Kurtosis (Platykurtic, <3)**
+  - **Thin tails** = Fewer extreme values, more uniform shape.
+  - The peak is flatter.
+  - Example: **Easy exam scores (most students score within a narrow range)**.
+
+---
+
+### **3️⃣ Can Low Kurtosis Be Skewed?**
+Yes! Skewness and kurtosis are **independent** properties.  
+- **Low Kurtosis + Positive Skew**: Salaries with a pay cap (uniform range, but some high salaries).  
+- **Low Kurtosis + Negative Skew**: Discounted prices (most items near a fixed price, some heavily discounted).  
+
+---
+
+### **4️⃣ Does High Kurtosis Mean Higher Probability of Extreme Values?**
+✅ **Yes!** High kurtosis distributions have **more extreme values** than normal distributions.  
+✅ This does **not necessarily** mean higher overall variance, but **outliers occur more often**.  
+🚀 **Example:** Stock returns—normal conditions are stable, but when a crash happens, it’s severe.
+
+---
+
+### **5️⃣ Visualization (Skewness & Kurtosis Combinations)**  
+
+We have discussed **9 cases** based on skewness and kurtosis. Below are their characteristics:
+
+| Skewness \ Kurtosis | **Normal Kurtosis** (≈3) | **High Kurtosis** (>3) | **Low Kurtosis** (<3) |
+|---------------------|------------------------|----------------------|----------------------|
+| **Zero Skew** (Symmetric) | Standard Bell Curve (Heights) | More Outliers (Stock Market Crashes) | Flat Distribution (Uniform Exam Scores) |
+| **Positive Skew** (Right) | Salaries (Few High Earners) | More Extreme High Salaries (Startup IPOs) | Capped Salaries (Fixed Pay Bands) |
+| **Negative Skew** (Left) | Exam Completion Time | Rare but Extreme Delays (Flights) | Discounted Prices (Narrow Range) |
 
 [🔼 Back to Top](#table-of-contents)
