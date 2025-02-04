@@ -573,12 +573,17 @@ If events **can overlap**, we must **subtract the double-counted part**:
 
 $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
 
-🔹 **Example**: Drawing a **red card or a face card** from a deck of 52 cards.  
-- **P(Red) = 26/52**  
-- **P(Face) = 12/52**  
-- **P(Red & Face) = 6/52** (since 6 face cards are red)
-  
-$$P(Red \cup Face) = \frac{26}{52} + \frac{12}{52} - \frac{6}{52} = \frac{32}{52} \approx 0.615$$
+🔹 **Example**: In a school of **100 students**:
+- **50 take Math** → $$\( P(M) = \frac{50}{100} = 0.5 \)$$  
+- **40 take Science** → $$\( P(S) = \frac{40}{100} = 0.4 \)$$  
+- **20 take both Math and Science** → $$\( P(M \cap S) = \frac{20}{100} = 0.2 \)$$  
+
+Applying the formula:
+$$P(M \cup S) = P(M) + P(S) - P(M \cap S)$$ $$= 0.5 + 0.4 - 0.2 = 0.7$$
+
+##### **Interpretation**
+- The probability that a randomly selected student is **taking Math or Science** is **0.7 (70%)**.
+- If we had **not subtracted** $$\( P(M \cap S) \)$$, we would have **double-counted the 20 students** taking both subjects.
 
 ---
   
@@ -629,3 +634,7 @@ $$P(\text{No Rain}) = 1 - 0.3 = 0.7$$
 ---
 
 [🔼 Back to Top](#table-of-contents)
+
+
+
+
