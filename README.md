@@ -558,53 +558,66 @@ $$0 \leq P(A) \leq 1$$
 
 ---
   
-# **2. Addition Rule (For Union of Events)**
-### **Case 1: Mutually Exclusive Events**
-Events **A and B** are **mutually exclusive** if **they cannot happen at the same time** (no overlap).  
+### **2. Addition Rule (For Union of Events)**
+#### **Case 1: Mutually Exclusive Events**
+Events **A and B** are **mutually exclusive** if **they cannot happen at the same time** (no overlap).
+
 $$P(A \cup B) = P(A) + P(B)$$
 
 🔹 **Example**: Rolling a **die**, probability of rolling a **3 or a 5**:  
 
 $$P(3) + P(5) = \frac{1}{6} + \frac{1}{6} = \frac{2}{6} = \frac{1}{3}$$
   
-### **Case 2: Non-Mutually Exclusive Events**
+#### **Case 2: Non-Mutually Exclusive Events**
 If events **can overlap**, we must **subtract the double-counted part**:
+
 $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
 
 🔹 **Example**: Drawing a **red card or a face card** from a deck of 52 cards.  
 - **P(Red) = 26/52**  
 - **P(Face) = 12/52**  
-- **P(Red & Face) = 6/52** (since 6 face cards are red)  
+- **P(Red & Face) = 6/52** (since 6 face cards are red)
+  
 $$P(Red \cup Face) = \frac{26}{52} + \frac{12}{52} - \frac{6}{52} = \frac{32}{52} \approx 0.615$$
 
 ---
   
-# **3. Multiplication Rule (For Intersection of Events)**
-### **Case 1: Independent Events**
+### **3. Multiplication Rule (For Intersection of Events)**
+#### **Case 1: Independent Events**
 Events **A and B are independent** if one **does not affect** the probability of the other:
+
 $$P(A \cap B) = P(A) \times P(B)$$
-🔹 **Example**: Flipping two fair coins, probability of getting **two heads**:  
+
+🔹 **Example**: Flipping two fair coins, probability of getting **two heads**:
+
 $$P(H) \times P(H) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}$$
 
-### **Case 2: Dependent Events**
+#### **Case 2: Dependent Events**
 Events are **dependent** if one event **affects** the probability of another:
+
 $$P(A \cap B) = P(A) \times P(B | A)$$
-🔹 **Example**: Drawing **two aces in a row** from a deck of 52 cards **without replacement**:  
+
+🔹 **Example**: Drawing **two aces in a row** from a deck of 52 cards **without replacement**: 
+
 - $$\( P(A_1) = \frac{4}{52} \)$$ (First ace)
-- $$\( P(A_2 | A_1) = \frac{3}{51} \)$$ (Second ace after first is removed)  
+- $$\( P(A_2 | A_1) = \frac{3}{51} \)$$ (Second ace after first is removed)
+  
 $$P(A_1 \cap A_2) = \frac{4}{52} \times \frac{3}{51} = \frac{12}{2652} \approx 0.0045$$
 
 ---
   
-# **4. Complement Rule (For "Not" Events)**
+### **4. Complement Rule (For "Not" Events)**
 The probability of an event **not occurring**:
+
 $$P(A^c) = 1 - P(A)$$
+
 🔹 **Example**: If the probability of rain today is **0.3**, then:  
+
 $$P(\text{No Rain}) = 1 - 0.3 = 0.7$$
 
 ---
   
-# **5. Summary**
+### **5. Summary**
 | Rule | Formula | Example |
 |------|---------|---------|
 | **Addition (Mutually Exclusive)** | $$\( P(A \cup B) = P(A) + P(B) \)$$ | Rolling a **3 or 5** on a die |
@@ -613,5 +626,6 @@ $$P(\text{No Rain}) = 1 - 0.3 = 0.7$$
 | **Multiplication (Dependent Events)** | $$\( P(A \cap B) = P(A) \times P(B | A) \)$$ | Drawing **two aces in a row** |
 | **Complement Rule** | $$\( P(A^c) = 1 - P(A) \)$$ | Probability of **no rain** |
 
-[🔼 Back to Top](#table-of-contents)
 ---
+
+[🔼 Back to Top](#table-of-contents)
