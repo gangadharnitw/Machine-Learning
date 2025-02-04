@@ -4,6 +4,7 @@
 3. [Understanding Skewness and Kurtosis](#understanding-skewness-and-kurtosis)
 4. [Percentile and Quartiles](#percentile-and-quartiles)
 5. [Box Plots & Histograms](#box-plots-and-histograms)
+6. [Probability Rules](#probability-rules)
 
 
 ## **Measures of Central Tendency**
@@ -561,12 +562,15 @@ $$0 \leq P(A) \leq 1$$
 ### **Case 1: Mutually Exclusive Events**
 Events **A and B** are **mutually exclusive** if **they cannot happen at the same time** (no overlap).  
 $$P(A \cup B) = P(A) + P(B)$$
+
 🔹 **Example**: Rolling a **die**, probability of rolling a **3 or a 5**:  
+
 $$P(3) + P(5) = \frac{1}{6} + \frac{1}{6} = \frac{2}{6} = \frac{1}{3}$$
   
 ### **Case 2: Non-Mutually Exclusive Events**
 If events **can overlap**, we must **subtract the double-counted part**:
 $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
+
 🔹 **Example**: Drawing a **red card or a face card** from a deck of 52 cards.  
 - **P(Red) = 26/52**  
 - **P(Face) = 12/52**  
@@ -609,4 +613,5 @@ $$P(\text{No Rain}) = 1 - 0.3 = 0.7$$
 | **Multiplication (Dependent Events)** | $$\( P(A \cap B) = P(A) \times P(B | A) \)$$ | Drawing **two aces in a row** |
 | **Complement Rule** | $$\( P(A^c) = 1 - P(A) \)$$ | Probability of **no rain** |
 
+[🔼 Back to Top](#table-of-contents)
 ---
