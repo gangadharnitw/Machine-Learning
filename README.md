@@ -3,6 +3,7 @@
 2. [Measures of Spread](#measures-of-spread)
 3. [Understanding Skewness and Kurtosis](#understanding-skewness-and-kurtosis)
 4. [Percentile and Quartiles](#percentile-and-quartiles)
+5. [Box Plots & Histograms](#box-plots-and-histograms)
 
 
 ## **Measures of Central Tendency**
@@ -412,3 +413,135 @@ Consider this dataset:
 This provides a clearer picture of how the data is spread and where the majority of the values fall.
 
 [🔼 Back to Top](#table-of-contents)
+
+---
+
+## **Box Plots and Histograms**  
+
+Both **box plots** and **histograms** help visualize data distribution, but they serve different purposes. Let’s break them down.
+
+
+### **1. Box Plot (Box-and-Whisker Plot)**
+A **box plot** is a graphical summary of data that displays the **median, quartiles, and outliers**. It helps quickly identify **skewness, spread, and potential outliers**.
+
+#### **Components of a Box Plot**  
+1. **Minimum (Lower Whisker)**: The smallest value within 1.5×IQR from Q1.  
+2. **First Quartile (Q1, 25th percentile)**: The median of the lower half of the dataset.  
+3. **Median (Q2, 50th percentile)**: The middle value of the dataset.  
+4. **Third Quartile (Q3, 75th percentile)**: The median of the upper half of the dataset.  
+5. **Maximum (Upper Whisker)**: The largest value within 1.5×IQR from Q3.  
+6. **Outliers**: Any data points beyond 1.5×IQR are marked separately (dots or stars).
+
+#### **Interquartile Range (IQR)**
+\[
+IQR = Q3 - Q1
+\]
+- **Lower fence**: \( Q1 - 1.5 \times IQR \)  
+- **Upper fence**: \( Q3 + 1.5 \times IQR \)  
+- Any values beyond this range are **outliers**.
+
+#### **Example Box Plot**
+```
+  |-----|=========|-----|
+   Min   Q1   Q2 (Median)  Q3   Max
+```
+If data is **right-skewed**, the median is closer to Q1. If **left-skewed**, it’s closer to Q3.
+
+---
+
+### **2. Histogram**
+A **histogram** is a bar chart that represents the **frequency distribution** of a dataset by grouping data into **bins (intervals).**  
+It shows how often each range of values appears.
+
+#### **Key Features**
+- **X-axis (Bins/Intervals)**: Divides the data into ranges.
+- **Y-axis (Frequency)**: The number of values in each bin.
+- **Shape of Distribution**:
+  - **Bell-shaped (Normal Distribution)**
+  - **Right-skewed (Positive Skew)**
+  - **Left-skewed (Negative Skew)**
+  - **Uniform (Flat)**
+  - **Bimodal (Two Peaks)**
+
+---
+
+### **Comparison: Box Plot vs Histogram**
+| Feature | Box Plot | Histogram |
+|---------|---------|------------|
+| **Shows** | Median, quartiles, outliers | Frequency of data |
+| **Best for** | Identifying outliers, skewness, and spread | Understanding overall shape of distribution |
+| **Handles Outliers** | Explicitly marks them | Can be hard to spot |
+| **Data Required** | Summary statistics | Full dataset |
+
+---
+
+### **Which One Should You Use?**
+- Use **box plots** to compare multiple datasets and detect outliers.
+- Use **histograms** to understand the overall distribution shape and frequency.
+
+---
+
+### **Justification: "1.5×IQR Covers Most of the Normal Data Spread"**  
+
+The **1.5×IQR rule** is widely used to identify **moderate outliers** in a dataset. This choice is based on **statistical reasoning** and works well for **many real-world distributions, especially normal distributions**.
+
+---
+
+### **1. Relationship Between IQR and Standard Deviation (σ)**
+For a **normal distribution**, the interquartile range (IQR) and standard deviation (σ) are related:
+
+\[
+IQR \approx 1.35 \times \sigma
+\]
+
+Since the **1.5×IQR rule** defines outliers, let's express it in terms of **σ**:
+
+\[
+1.5 \times IQR \approx 1.5 \times (1.35 \times \sigma) = 2.025 \times \sigma
+\]
+
+This means the **lower and upper fences (Q1 - 1.5×IQR and Q3 + 1.5×IQR)** correspond roughly to **±2.025 standard deviations (σ) from the median** in a normal distribution.
+
+---
+
+### **2. Coverage in a Normal Distribution**
+In a **normal distribution**, we know that:
+- **68%** of data falls within **±1σ**.
+- **95%** of data falls within **±2σ**.
+- **99.7%** of data falls within **±3σ**.
+
+Since the **1.5×IQR range corresponds to approximately ±2.025σ**, it **captures roughly 95% of the data in a normal distribution**.  
+Thus, **only about 5% of values (2.5% on each tail) fall outside this range**, making them potential outliers.
+
+---
+
+### **3. Why 1.5 Instead of 2 or 3?**
+- **1.5×IQR is strict enough to flag unusual points** but **not too extreme** that it falsely labels common values as outliers.
+- **2×IQR or 3×IQR** would detect **fewer** outliers, possibly missing moderate deviations.
+- **1.0×IQR** would be too sensitive, flagging many normal points as outliers.
+
+---
+
+### **4. Practical Example**
+Consider a **normally distributed dataset** with mean = 50 and σ = 10.  
+- **IQR ≈ 1.35 × 10 = 13.5**
+- **Lower Fence ≈ Q1 - 1.5×13.5**
+- **Upper Fence ≈ Q3 + 1.5×13.5**
+
+Most data (95%) stays within this range, while **extreme values (beyond ±2σ) are flagged as outliers**.
+
+---
+
+### **5. Works Well for Other Distributions**
+While the **1.5×IQR rule** is based on the normal distribution, it **also works well for skewed and non-normal distributions**, making it a **robust choice** for general outlier detection.
+
+---
+
+### **Conclusion**
+✔ **1.5×IQR covers approximately 95% of a normal distribution’s data**.  
+✔ **It helps detect moderate outliers while avoiding excessive false positives**.  
+✔ **It is simple, robust, and widely used in statistics, data science, and machine learning**.
+
+[🔼 Back to Top](#table-of-contents)
+
+---
