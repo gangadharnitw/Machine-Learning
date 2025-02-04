@@ -2,6 +2,7 @@
 1. [Measures of Central Tendency](#measures-of-central-tendency)
 2. [Measures of Spread](#measures-of-spread)
 3. [Understanding Skewness and Kurtosis](#understanding-skewness-and-kurtosis)
+4. [Percentile and Quartiles](#percentile-and-quartiles)
 
 
 ## **Measures of Central Tendency**
@@ -371,5 +372,43 @@ We have discussed **9 cases** based on skewness and kurtosis. Below are their ch
 
 ![image](https://github.com/user-attachments/assets/4f709ede-1bd5-4678-ab77-7d1f4fa552aa)
 
+
+[🔼 Back to Top](#table-of-contents)
+
+---
+
+## **Percentile and Quartiles**
+Percentiles and quartiles are both ways of dividing data into groups, helping to understand the distribution of a dataset. Here's an overview:
+
+### Percentiles
+- **Definition:** A percentile is a value below which a given percentage of observations in a dataset fall. 
+- **Percentile Notation:** If you're looking at the *p*-th percentile, it means the value below which *p* percent of the data points lie.
+  - **For example**: The 50th percentile (often called the median) is the value where half of the data is less than this value, and half is greater.
+- **Key Percentiles:**
+  - **25th percentile (P25)**: 25% of the data is below this value.
+  - **50th percentile (P50)**: Also known as the median, 50% of the data is below this value.
+  - **75th percentile (P75)**: 75% of the data is below this value.
+- **How to Calculate:** Sort your data in ascending order and find the value at the desired percentile. There are formulas and interpolation methods to handle cases when the percentile doesn't exactly match a data point.
+
+### Quartiles
+- **Definition:** Quartiles divide data into four equal parts. There are three quartiles:
+  - **First Quartile (Q1)**: The 25th percentile; 25% of the data points lie below Q1.
+  - **Second Quartile (Q2)**: The 50th percentile; it is the median.
+  - **Third Quartile (Q3)**: The 75th percentile; 75% of the data points lie below Q3.
+- **Interquartile Range (IQR):** This is the range between Q1 and Q3 (Q3 - Q1) and represents the spread of the middle 50% of the data.
+  - **IQR = Q3 - Q1**
+
+### Example:
+Consider this dataset:  
+**3, 7, 8, 12, 15, 18, 20, 25, 30**
+
+1. **Arrange the data**: It's already sorted.
+2. **Median (Q2)**: The middle value is 15, so the median (Q2) is 15.
+3. **First Quartile (Q1)**: The median of the lower half (3, 7, 8, 12) is 7.5, so Q1 = 7.5.
+4. **Third Quartile (Q3)**: The median of the upper half (18, 20, 25, 30) is 22.5, so Q3 = 22.5.
+5. **Interquartile Range (IQR)**:  
+   \( IQR = Q3 - Q1 = 22.5 - 7.5 = 15 \)
+
+This provides a clearer picture of how the data is spread and where the majority of the values fall.
 
 [🔼 Back to Top](#table-of-contents)
