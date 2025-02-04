@@ -433,18 +433,15 @@ A **box plot** is a graphical summary of data that displays the **median, quarti
 6. **Outliers**: Any data points beyond 1.5×IQR are marked separately (dots or stars).
 
 #### **Interquartile Range (IQR)**
-\[
-IQR = Q3 - Q1
-\]
-- **Lower fence**: \( Q1 - 1.5 \times IQR \)  
-- **Upper fence**: \( Q3 + 1.5 \times IQR \)  
+$$IQR = Q3 - Q1$$
+- **Lower fence**: $$\( Q1 - 1.5 \times IQR \)$$  
+- **Upper fence**: $$\( Q3 + 1.5 \times IQR \)$$  
 - Any values beyond this range are **outliers**.
 
 #### **Example Box Plot**
-```
-  |-----|=========|-----|
-   Min   Q1   Q2 (Median)  Q3   Max
-```
+
+![image](https://github.com/user-attachments/assets/e5e84f8d-dc04-4ec4-a81e-a700934b5140)
+
 If data is **right-skewed**, the median is closer to Q1. If **left-skewed**, it’s closer to Q3.
 
 ---
@@ -490,15 +487,11 @@ The **1.5×IQR rule** is widely used to identify **moderate outliers** in a data
 ### **1. Relationship Between IQR and Standard Deviation (σ)**
 For a **normal distribution**, the interquartile range (IQR) and standard deviation (σ) are related:
 
-\[
-IQR \approx 1.35 \times \sigma
-\]
+$$IQR \approx 1.35 \times \sigma$$
 
 Since the **1.5×IQR rule** defines outliers, let's express it in terms of **σ**:
 
-\[
-1.5 \times IQR \approx 1.5 \times (1.35 \times \sigma) = 2.025 \times \sigma
-\]
+$$1.5 \times IQR \approx 1.5 \times (1.35 \times \sigma) = 2.025 \times \sigma$$
 
 This means the **lower and upper fences (Q1 - 1.5×IQR and Q3 + 1.5×IQR)** correspond roughly to **±2.025 standard deviations (σ) from the median** in a normal distribution.
 
