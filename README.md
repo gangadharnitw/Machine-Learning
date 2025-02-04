@@ -628,7 +628,7 @@ $$P(\text{No Rain}) = 1 - 0.3 = 0.7$$
 | **Addition (Mutually Exclusive)** | $$\( P(A \cup B) = P(A) + P(B) \)$$ | Rolling a **3 or 5** on a die |
 | **Addition (Non-Mutually Exclusive)** | $$\( P(A \cup B) = P(A) + P(B) - P(A \cap B) \)$$ | Drawing a **red or face card** |
 | **Multiplication (Independent Events)** | $$\( P(A \cap B) = P(A) \times P(B) \)$$ | Flipping **two heads** in a row |
-| **Multiplication (Dependent Events)** | $$\( P(A \cap B) = P(A) \times P(B | A) \)$$ | Drawing **two aces in a row** |
+| **Multiplication (Dependent Events)** | $$\( P(A \cap B) = P(A) \times P(B / A) \)$$ | Drawing **two aces in a row** |
 | **Complement Rule** | $$\( P(A^c) = 1 - P(A) \)$$ | Probability of **no rain** |
 
 ---
